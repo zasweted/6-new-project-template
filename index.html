@@ -6,20 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>background</title>
 </head>
-<body>
-    <div class="backround-image"></div>
-    </div>
-</body>
 <style>
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    
+    .ghost {
+      position: absolute;
+      top: 15%;
+      left: 90%;
+      width: 10%;
+    }
+    
+    .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+    
+    .button {
+      position: absolute;
+      top: 55%;
+      left: 20%;
+    }
+    
+    .bottom-right {
+      position: absolute;
+      top: 40%;
+      left: 27%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .centered {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
     *{
         margin: 0;
         padding: 0%;
     }
-    .backround-image {
+    .container {
         background-image: url('door.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
     }
-</style>
+    </style>
+<body>
+    <div class="container">
+        <img src="ghost.png" alt="ghost" class="ghost">
+        <div class="top-left"><p></p></div>
+        <div class="button"><a href="#" style="font-size: 20px; padding: 10px; padding-left: 30px; padding-right: 30px; border-radius: 25px; text-decoration: none; color: white; border: 2px solid white">Go to home</a></div>
+        <div class="bottom-right"><p style="font-size: 60px;">Page not found...</p></div>
+        <div class="centered"><p style="font-size: 80px;">404</p></div>
+    </div>
+</body>
+    
 </html>
